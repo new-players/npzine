@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Bai_Jamjuree } from "next/font/google";
 import Marquee from "react-fast-marquee";
 import { useAccount } from "wagmi";
 import {
@@ -13,11 +12,6 @@ import {
 } from "~~/hooks/scaffold-eth";
 
 const MARQUEE_PERIOD_IN_SEC = 5;
-const bai_jamjuree = Bai_Jamjuree({
-  style: "normal",
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const ContractData = () => {
   const { address } = useAccount();
@@ -100,14 +94,14 @@ export const ContractData = () => {
           </button>
           <div className="bg-secondary border border-primary rounded-xl flex">
             <div className="p-2 py-1 border-r border-primary flex items-end">Total count</div>
-            <div className={`text-4xl text-right min-w-[3rem] px-2 py-1 flex justify-end ${bai_jamjuree.className}`}>
+            <div className={`text-4xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree`}>
               {totalCounter?.toString() || "0"}
             </div>
           </div>
         </div>
 
         <div
-          className={`mt-3 border border-primary bg-neutral rounded-3xl text-secondary  overflow-hidden text-[116px] whitespace-nowrap w-full uppercase tracking-tighter ${bai_jamjuree.className} leading-tight`}
+          className={`mt-3 border border-primary bg-neutral rounded-3xl text-secondary  overflow-hidden text-[116px] whitespace-nowrap w-full uppercase tracking-tighter font-bai-jamjuree leading-tight`}
         >
           <div className="relative overflow-x-hidden" ref={containerRef}>
             {/* for speed calculating purposes */}
