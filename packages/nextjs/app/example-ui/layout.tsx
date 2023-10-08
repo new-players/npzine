@@ -1,4 +1,4 @@
-import { PreloadResources } from "./preload-resources";
+import { PreloadResources } from "./_components/PreloadResources";
 
 const ExampleUiLayout = ({ children }: { children: React.ReactNode }) => {
   return (
