@@ -15,3 +15,15 @@ artifacts-zk
 cache-zk
 
 deployments
+
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# ignore all broadcast logs
+broadcast/
